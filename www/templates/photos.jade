@@ -1,0 +1,10 @@
+ion-view(view-title='Photos')
+  ion-content
+    .photos
+      button.button.button-block.button-positive(ng-click='takePhotos()') Take Photo(s)
+
+      .list
+        a.item.item-icon-left.item-icon-right(href ui-sref='^.photo({id: slide.id})' ng-repeat='slide in slides | orderBy: "-time" track by slide.id')
+          i.icon.ion-camera
+          span {{slide.localTimeFormatted}}
+          i.icon.ion-ios-arrow-forward

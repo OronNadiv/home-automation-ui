@@ -1,0 +1,12 @@
+ion-view(view-title='')
+  ion-content
+    .alarm-toggles
+      .list
+        a.item.item-icon-left(ng-repeat='toggle in toggles | orderBy: "-id" track by toggle.id')
+          i.icon.ion-toggle-filled(ng-if='toggle.is_armed')
+          i.icon.ion-toggle(ng-if='!toggle.is_armed')
+          span {{toggle.requestedBy.name}}
+          span.item-note  {{toggle.localTimeFormatted}}
+
+      .text-center(ng-if='toggles.length === 0')
+        h3 No toggles detected

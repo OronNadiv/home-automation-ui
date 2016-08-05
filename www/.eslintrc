@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "es6": false,
+    "node": false
+  },
+  "plugins": [
+    "angular"
+  ],
+  "globals": {
+    "_": false,
+    "angular": false,
+    "io": false,
+    "moment": false,
+    "require": false,
+    "s": false
+  }
+}

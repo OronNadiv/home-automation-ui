@@ -1,0 +1,18 @@
+ion-view(view-title='Garage')
+  ion-content
+    .garage.padding-top
+      //audio(media-player="garagePlayer" data-playlist="garagePlaylist")
+      a.button.button-block.door-bell(ng-click='changeDoorStateClicked()' role='button'
+      ng-class='{"button-assertive": recentDoorStates && recentDoorStates.length && recentDoorStates[0].is_open, "button-balanced": !recentDoorStates || !recentDoorStates.length || !recentDoorStates[0].is_open}')
+        div Click Here
+        div(ng-if='recentDoorStates && recentDoorStates.length && recentDoorStates[0].is_open') to Close
+        div(ng-if='!recentDoorStates || !recentDoorStates.length || !recentDoorStates[0].is_open') to Open
+
+      div(ng-if='me.is_trusted && recentDoorStates && recentDoorStates.length')
+        .list.padding-top
+          a.item.item-avatar(ng-repeat='recentDoorState in recentDoorStates | orderBy: "-id" track by recentDoorState.id')
+            img(ng-if='recentDoorState.is_open' src='/images/home-garage-open-36-000000.png')
+            img(ng-if='!recentDoorState.is_open' src='/images/home-garage-36-000000.png')
+            span(ng-if='recentDoorState.requestedBy.name') {{recentDoorState.requestedBy.name}}
+            span(ng-if='!recentDoorState.requestedBy.name') Unknown
+            span.item-note  {{recentDoorState.localTimeFormatted}}

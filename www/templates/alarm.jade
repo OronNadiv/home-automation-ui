@@ -1,0 +1,25 @@
+ion-view(view-title='Alarm')
+  ion-content
+    //audio(media-player='alarmPlayer' data-playlist='alarmPlaylist')
+    .alarm
+      label.item.item-toggle
+        span(ng-show='!isArmed') Not Armed
+        span(ng-show='isArmed') Armed
+        label.toggle.toggle-assertive
+          input(type="checkbox" ng-model='isArmed' ng-change='onAlarmToggle(isArmed)')
+          .track
+            .handle
+
+      .list.padding-top(ng-if='me.is_trusted')
+        a.item.item-icon-left.item-icon-right(href ui-sref='^.alarmAcks')
+          i.icon.ion-ios-pulse-strong
+          span Acknowledgments
+          i.icon.ion-ios-arrow-forward
+        a.item.item-icon-left.item-icon-right(href ui-sref='^.alarmMotions')
+          i.icon.ion-android-walk
+          span Motions
+          i.icon.ion-ios-arrow-forward
+        a.item.item-icon-left.item-icon-right(href ui-sref='^.alarmToggles')
+          i.icon.ion-ios-toggle
+          span Toggles
+          i.icon.ion-ios-arrow-forward

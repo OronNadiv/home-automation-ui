@@ -1,0 +1,9 @@
+coverage
+bower_components
+node_modules
+**/*.log
+**/*.log.*
+
+/www/**/*.html
+/www/bundle.js
+/www/css/style.css

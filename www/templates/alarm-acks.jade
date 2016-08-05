@@ -1,0 +1,12 @@
+ion-view(view-title='')
+  ion-content
+    .alarm-acks
+      .list
+        a.item.item-icon-left(ng-repeat='ack in acks | orderBy: "sensor_name" track by ack.id' ng-class='{danger: ack.mayBeFaulty}')
+          i.icon.ion-ios-pulse-strong(ng-if='!ack.mayBeFaulty')
+          i.icon.ion-android-warning(ng-if='ack.mayBeFaulty')
+          span {{ack.sensor_name}}
+          span.item-note  {{ack.localTimeFormatted}}
+
+      .text-center(ng-if='acks.length === 0')
+        h3 No acknowledgements detected

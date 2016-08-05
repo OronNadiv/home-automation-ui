@@ -1,0 +1,24 @@
+ion-view(view-title='')
+  ion-content
+    .user
+      .list
+        label.item.item-input
+          span.input-label Name
+          input(type="text" ng-model='user.name')
+        label.item.item-input
+          span.input-label Email
+          input(type="email" ng-model='user.email')
+        label.item.item-toggle
+          span Is Active
+          label.toggle.toggle-balanced
+            input(type="checkbox" ng-model='user.is_active' ng-disabled='user.is_owner')
+            .track
+              .handle
+        label.item.item-input(ng-disabled='user.is_owner' ng-click='changeRole()')
+          span.input-label Role
+          span(ng-show='user.role == "regular"') Regular
+          span(ng-show='user.role == "trusted"') Trusted
+          span(ng-show='user.role == "admin"') Administrator
+          span(ng-show='user.role == "owner"') Owner
+
+      button.button.button-block.button-positive.padding-vertical(ng-click='changePassword()') Change Password

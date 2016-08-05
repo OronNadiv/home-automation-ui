@@ -1,0 +1,76 @@
+{
+  "name": "home-automation-ui",
+  "private": true,
+  "author": "Oron Nadiv <oron@nadiv.us> (https://github.com/OronNadiv/)",
+  "homepage": "https://github.com/OronNadiv/home-automation-ui/",
+  "bugs": "https://github.com/OronNadiv/home-automation-ui/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OronNadiv/home-automation-ui.git"
+  },
+  "license": "AGPL-3.0",
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "engines": {
+    "node": "^6",
+    "npm": "^3"
+  },
+  "scripts": {
+    "bower": "bower install && bower update && bower prune",
+    "cover": "istanbul cover _mocha -- --recursive -t 10000",
+    "grunt": "grunt",
+    "lint": "eslint . --ignore-path .gitignore",
+    "postinstall": "npm run bower && npm run grunt",
+    "start": "node src/app.js",
+    "test": "mocha --recursive -t 10000 && npm run lint"
+  },
+  "dependencies": {
+    "bluebird": "^3",
+    "body-parser": "^1",
+    "bower": "^1",
+    "browserify": "^13",
+    "cookie-parser": "^1",
+    "diehard": "^1",
+    "envify": "^3",
+    "express": ">=4.5 <5",
+    "grunt": "^1",
+    "grunt-browserify": "^5",
+    "grunt-cli": "^1",
+    "grunt-contrib-clean": "^1",
+    "grunt-contrib-copy": "^1",
+    "grunt-contrib-jade": "^1",
+    "grunt-contrib-stylus": "^1",
+    "jade": "^1",
+    "jsonwebtoken": "^7",
+    "require-globify": "^1",
+    "serve-favicon": "^2",
+    "socket.io": "^1",
+    "winston": "^2"
+  },
+  "devDependencies": {
+    "coveralls": "^2",
+    "eslint": "^3",
+    "eslint-config-standard": "^5",
+    "eslint-plugin-angular": "^1",
+    "eslint-plugin-promise": "^2",
+    "eslint-plugin-standard": "^2",
+    "istanbul": "^0.4",
+    "mocha": "^3",
+    "should": "^10",
+    "supertest": "^2",
+    "supertest-as-promised": "^3"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ]
+}

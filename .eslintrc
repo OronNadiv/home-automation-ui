@@ -1,0 +1,8 @@
+{
+  "extends": "standard",
+  "plugins": [
+    "promise",
+    "standard"
+  ],
+  "parser": "espree"
+}
