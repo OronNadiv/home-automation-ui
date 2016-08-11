@@ -31,6 +31,7 @@
     "bower": "^1",
     "browserify": "^13",
     "cookie-parser": "^1",
+    "debug": "^2",
     "diehard": "^1",
     "envify": "^3",
     "express": ">=4.5 <5",
@@ -45,8 +46,7 @@
     "jsonwebtoken": "^7",
     "require-globify": "^1",
     "serve-favicon": "^2",
-    "socket.io": "^1",
-    "winston": "^2"
+    "socket.io": "^1"
   },
   "devDependencies": {
     "coveralls": "^2",

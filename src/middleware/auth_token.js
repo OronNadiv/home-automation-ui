@@ -1,7 +1,4 @@
-const path = require('path')
-const LOG_PREFIX = `"${path.basename(__filename)}":`
-const log = require('../logger')
-const info = log.info.bind(log, LOG_PREFIX)
+const info = require('debug')('ha:middleware:auth_token:info')
 
 const jwt = require('jsonwebtoken')
 const config = require('../config')
