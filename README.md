@@ -1,7 +1,7 @@
 # Home Automation - UI
-This server is the gateway to the frontend html, css, javascript, images and more.
+This server is the gateway to the front-end html, css, javascript, images and more.
 It validates the user's token and sends back the required files.
-The frontend uses [AngularJS][angular-url], [ionic][ionic-url], [pug (previously jade)][pug-url] and [stylus][stylus-url].
+The front-end uses [AngularJS][angular-url], [ionic][ionic-url], [pug (previously jade)][pug-url] and [stylus][stylus-url].
 
 [![JavaScript Style Guide][standard-image]][standard-url]
 [![Dependencies][dependencies-image]][dependencies-url]
