@@ -58,8 +58,9 @@ angular.module('home-automation.controllers')
                   e.preventDefault()
                 } else {
                   new Users($scope.newUser).$save()
-                    .then(function () {
+                    .then(function (user) {
                       popup.close()
+                      $scope.users.push(user)
                     })
                     .catch(console.error)
                 }

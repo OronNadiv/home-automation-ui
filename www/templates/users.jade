@@ -2,7 +2,7 @@ ion-view(view-title='Users')
   ion-content
     .users.padding-bottom
       .list
-        a.item.item-icon-left.item-icon-right(href ui-sref='^.user({id: user.id})' ng-repeat='user in users' ng-disabled='user.is_owner')
+        a.item.item-icon-left.item-icon-right(href ui-sref='^.user({id: user.id})' ng-repeat='user in users | orderBy: "name"' ng-disabled='user.is_owner')
           i.icon.ion-ios-person(ng-show='user.is_active')
           i.icon.ion-ios-person-outline(ng-show='!user.is_active')
           span {{user.name}}

@@ -51,7 +51,7 @@
   "devDependencies": {
     "coveralls": "^2",
     "eslint": "^3",
-    "eslint-config-standard": "^5",
+    "eslint-config-standard": "^6.0.0",
     "eslint-plugin-angular": "^1",
     "eslint-plugin-promise": "^2",
     "eslint-plugin-standard": "^2",
