@@ -59,20 +59,7 @@ angular.module('home-automation.controllers')
             })
         }
 
-        if (isClosed) {
-          var confirmPopup = $ionicPopup.confirm({
-            title: 'Confirmation',
-            template: 'Are you sure?'
-          })
-
-          confirmPopup.then(function (res) {
-            if (res) {
-              changeDoorState()
-            }
-          })
-        } else {
-          changeDoorState()
-        }
+        changeDoorState()
       }
       refreshRecentDoorStates()
     }
