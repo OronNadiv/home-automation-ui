@@ -23,4 +23,6 @@ if (!config.loginUrl) {
 
 config.port = process.env.PORT || 3000
 
+config.skipSSL = process.env.SKIP_SSL && process.env.SKIP_SSL.toUpperCase() === 'TRUE'
+
 module.exports = config
