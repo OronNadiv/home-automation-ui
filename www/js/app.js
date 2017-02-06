@@ -108,6 +108,21 @@ angular.module('home-automation', [
       //  $ionicConfigProvider.tabs.style('standard'); // other values: top
       // }])
 
+      .state('tab.garage', {
+        url: '^/garage',
+        views: {
+          'tab-garage': {
+            templateUrl: 'templates/garage.html',
+            controller: 'GarageCtrl',
+            resolve: {
+              me: function (Users) {
+                return Users.me().$promise
+              }
+            }
+          }
+        }
+      })
+
       .state('tab.alarm', {
         url: '^/alarm',
         views: {
@@ -156,21 +171,6 @@ angular.module('home-automation', [
           'tab-alarm': {
             templateUrl: '/templates/alarm-toggles.html',
             controller: 'AlarmTogglesCtrl',
-            resolve: {
-              me: function (Users) {
-                return Users.me().$promise
-              }
-            }
-          }
-        }
-      })
-
-      .state('tab.garage', {
-        url: '^/garage',
-        views: {
-          'tab-garage': {
-            templateUrl: 'templates/garage.html',
-            controller: 'GarageCtrl',
             resolve: {
               me: function (Users) {
                 return Users.me().$promise
