@@ -15,4 +15,3 @@ angular.module('home-automation.factories')
       return $resource($window.ALARM_URL + '/motions', {}, methods)
     }
   )
-

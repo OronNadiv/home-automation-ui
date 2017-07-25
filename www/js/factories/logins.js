@@ -14,4 +14,3 @@ angular.module('home-automation.factories')
       return $resource($window.LOGIN_URL + '/:id', {id: '@id'}, methods)
     }
   )
-

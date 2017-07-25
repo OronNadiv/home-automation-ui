@@ -6,7 +6,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('AlarmTogglesCtrl',
     function ($scope,
-              AlarmToggles, me, socketIO) {
+      AlarmToggles, me, socketIO) {
       function processToggleEvent (event) {
         event.localTimeFormatted = moment.utc(event.created_at).local().format('l h:mm:ss A')
         return event

@@ -6,7 +6,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('UsersCtrl',
     function ($scope, $ionicPopup,
-              Users, me, users) {
+      Users, me, users) {
       $scope.users = users
       _.each($scope.users, function (user) {
         var handler = $scope.$watch(function () {

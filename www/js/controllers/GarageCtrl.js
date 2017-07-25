@@ -8,7 +8,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('GarageCtrl',
     function ($window, $scope, $ionicPopup, $timeout,
-              GarageStates, GarageToggles, me, socketIO) {
+      GarageStates, GarageToggles, me, socketIO) {
       $scope.me = me
       $scope.io = socketIO(me)
       function processDoorState (state) {

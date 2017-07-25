@@ -7,7 +7,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('PhotoCtrl',
     function ($window, $scope, id,
-              Files, me, socketIO) {
+      Files, me, socketIO) {
       $scope.me = me
       $scope.io = socketIO(me)
       $scope.slides = []

@@ -8,7 +8,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('PhotosCtrl',
     function ($window, $scope, $ionicActionSheet, $ionicPopup, $timeout,
-              Cameras, Files, me, socketIO) {
+      Cameras, Files, me, socketIO) {
       $scope.me = me
       $scope.io = socketIO(me)
       function processImage (image) {

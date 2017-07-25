@@ -7,7 +7,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('AlarmCtrl',
     function ($scope,
-              AlarmToggles, me, socketIO) {
+      AlarmToggles, me, socketIO) {
       $scope.me = me
       $scope.io = socketIO(me)
 

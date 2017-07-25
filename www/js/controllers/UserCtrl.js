@@ -6,7 +6,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('UserCtrl',
     function ($scope, $ionicActionSheet, $ionicPopup,
-              Logins, user) {
+      Logins, user) {
       $scope.user = user
 
       $scope.changeRole = function () {

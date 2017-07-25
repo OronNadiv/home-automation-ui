@@ -7,7 +7,7 @@ require('./index')
 angular.module('home-automation.controllers')
   .controller('AlarmMotionsCtrl',
     function ($scope,
-              AlarmMotions, me, socketIO) {
+      AlarmMotions, me, socketIO) {
       $scope.io = socketIO(me)
       function processAlarmEvent (event) {
         event.localTimeFormatted = moment.utc(event.updated_at).local().format('l h:mm:ss A')
