@@ -1,13 +1,11 @@
+#### DEPRECATED. See [new implementation][ui-react-url] using React.
+
 # Home Automation - UI
 This server is the gateway to the front-end html, css, javascript, images and more.
 It validates the user's token and sends back the required files.
 The front-end uses [AngularJS][angular-url], [ionic][ionic-url], [pug (previously jade)][pug-url] and [stylus][stylus-url].
 
 [![JavaScript Style Guide][standard-image]][standard-url]
-[![Dependencies][dependencies-image]][dependencies-url]
-[![DevDependencies][dependencies-dev-image]][dependencies-dev-url]
-[![Build Status][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
 
 I suggest you first [read][overview-url] about the different components of the home automation application.  
 This will help you understand better the general architecture and different functions of the system.
@@ -61,3 +59,4 @@ __STORAGE\_URL__ (required): url to the [storage][storage-url] server.  Default:
 [push-url]: https://github.com/OronNadiv/push-api
 [storage-url]: https://github.com/OronNadiv/storage-api
 [ui-url]: https://github.com/OronNadiv/home-automation-ui
+[ui-react-url]: https://github.com/oronnadiv/home-automation-ui-react
