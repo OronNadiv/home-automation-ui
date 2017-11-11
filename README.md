@@ -59,4 +59,4 @@ __STORAGE\_URL__ (required): url to the [storage][storage-url] server.  Default:
 [push-url]: https://github.com/OronNadiv/push-api
 [storage-url]: https://github.com/OronNadiv/storage-api
 [ui-url]: https://github.com/OronNadiv/home-automation-ui
-[ui-react-url]: https://github.com/oronnadiv/home-automation-ui-react
+[ui-react-url]: https://github.com/OronNadiv/home-automation-ui-react
